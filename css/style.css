@@ -260,6 +260,13 @@ img {
   text-align: center;
 }
 
+.form-button {
+  padding-top: 10px;
+  padding-left: 29px;
+  padding-right: 62px;
+  padding-bottom: 10px;
+}
+
 /* Section about us */
 
 .about-us-icon-item {
@@ -555,6 +562,112 @@ div > b {
   width: 20px;
   height: 20px;
   fill: #fff;
+}
+
+.footer-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.form-email {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: #2f303a;
+  border-radius: 4px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.footer-form-section {
+  padding-top: 12px;
+}
+
+/* Main form */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.main-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+
+  width: 528px;
+  height: 581px;
+
+  background: #ffffff;
+  color: #212121;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.contact-form-input {
+  margin-left: 40px;
+  margin-right: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.contact-form-input:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.form-title {
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding: 40px 40px 30px 40px;
+  margin: 0;
+}
+
+.contact-information {
+  padding-top: 12px;
+  padding-left: 42px;
+  padding-bottom: 12px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
+.user-message {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  width: 448px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+.chekbox {
+  display: flex;
+  justify-content: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: #757575;
 }
 
 /* Portfolio Page */

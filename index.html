@@ -57,8 +57,11 @@
           Эффективные решения <br />
           для вашего бизнеса
         </h1>
-        <button class="button animate__bounce">Заказать услугу</button>
+        <button data-open-modal class="button animate__bounce">
+          Заказать услугу
+        </button>
       </section>
+
       <!--Cекция о нас-->
       <section class="about-us">
         <div class="container">
@@ -376,6 +379,7 @@
         </div>
       </section>
     </main>
+
     <!--Подвал страницы-->
     <footer class="footer">
       <div class="container footer-container">
@@ -433,10 +437,79 @@
             </li>
           </ul>
         </div>
-        <div>
-          <b>Подпишитесь на рассылку</b>
+        <div class="footer-form-section">
+          <b class="footer-form-title">Подпишитесь на рассылку</b>
+          <form action="#" class="footer-form">
+            <input
+              type="email"
+              class="form-email"
+              name="user-email"
+              placeholder="Email"
+            />
+            <button type="submit" class="button form-button">
+              Подписаться
+            </button>
+          </form>
         </div>
       </div>
     </footer>
+    <!--Главная форма-->
+    <div data-backdrop class="backdrop is-hidden">
+      <form action="#" class="main-form">
+        <h3 class="form-title">Оставьте свои данные, мы вам перезвоним</h3>
+        <input
+          type="text"
+          class="contact-form-input contact-information"
+          name="user-name"
+          placeholder="Имя"
+        />
+        <input
+          type="tel"
+          class="contact-form-input contact-information"
+          name="user-phone"
+          placeholder="Телефон"
+        />
+        <input
+          type="email"
+          class="contact-form-input contact-information"
+          name="user-email"
+          placeholder="Почта"
+        />
+        <textarea
+          class="contact-form-input user-message"
+          name="user-message"
+          id=""
+          placeholder="Комментарий"
+        ></textarea>
+        <div class="chekbox">
+          <input type="checkbox" name="terms-of-use" id="terms-of-use" />
+          <label for="terms-of-use"
+            >Соглашаюсь с рассылкой и принимаю Условия договора</label
+          >
+        </div>
+
+        <button data-close-modal type="submit" class="button">Отправить</button>
+      </form>
+    </div>
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector('[data-open-modal]'),
+        closeModalBtn: document.querySelector('[data-close-modal]'),
+        backdrop: document.querySelector('[data-backdrop]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      refs.backdrop.addEventListener('click', logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle('is-hidden');
+      }
+
+      function logBackdropClick() {
+        console.log('Это клик в бекдроп');
+      }
+    </script>
   </body>
 </html>
